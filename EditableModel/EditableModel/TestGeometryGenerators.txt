@@ -1,0 +1,6 @@
+1. poly generator +
+2. splitted edge poly generator
+	2.1. Write the code +
+	2.2. Test compilation +
+	2.3. Test generation and split edge operation
+3. Splitted poly generator

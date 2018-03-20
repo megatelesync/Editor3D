@@ -1,0 +1,6 @@
+1. Operation ModelPolygonHandle::SplitEdge tested
+2. Operation ModelPolygonHandle::SplitOrdered tested
+3. Operation ModelPolyHandleRange MakeEdgeQuads(const ModelPolygonHandle& poly) tested
+	3.1. Используемая операция slice нарушает iterator validity в Visual Studio 2012,
+	но начиная с Visual Studio 2013 slice не нарушает iterator validity, что соответствует стандарту.
+4. Operation ModelPolyHandleRange Extrude(const ModelPolygonHandle& poly, const XMFLOAT3& offset) tested

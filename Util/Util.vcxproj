@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FC49D57A-1EAB-49E0-B030-A971477188C1}</ProjectGuid>
+    <RootNamespace>Util</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>../!LIB/</OutDir>
+    <TargetName>util_debug</TargetName>
+    <IncludePath>C:\!DV\!OTHER_LIBS\boost_1_65_1;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PreprocessorDefinitions>_HAS_AUTO_PTR_ETC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="h\ArrayPtr.h" />
+    <ClInclude Include="h\CommutativeMap2D.h" />
+    <ClInclude Include="h\Config\Util_Config_Arr.h" />
+    <ClInclude Include="h\Config\Util_Config_Master.h" />
+    <ClInclude Include="h\Container\Util_AllocBlockList.h" />
+    <ClInclude Include="h\Container\Util_AllocHandleList.h" />
+    <ClInclude Include="h\Container\Util_AllocList.h" />
+    <ClInclude Include="h\Container\Util_AtomicAllocList.h" />
+    <ClInclude Include="h\Container\Util_DynamicArray2D.h" />
+    <ClInclude Include="h\Container\Util_OrderedMap.h" />
+    <ClInclude Include="h\CoreUtil\CoreUtil_Assert.h" />
+    <ClInclude Include="h\CoreUtil\CoreUtil_BaseObject.h" />
+    <ClInclude Include="h\CoreUtil\CoreUtil_Bytes.h" />
+    <ClInclude Include="h\CoreUtil\CoreUtil_CStrView.h" />
+    <ClInclude Include="h\CoreUtil\CoreUtil_Hash.h" />
+    <ClInclude Include="h\CoreUtil\CoreUtil_IdGenerator.h" />
+    <ClInclude Include="h\CoreUtil\CoreUtil_Master.h" />
+    <ClInclude Include="h\CoreUtil\CoreUtil_Ptr.h" />
+    <ClInclude Include="h\CoreUtil\CoreUtil_StdInclude.h" />
+    <ClInclude Include="h\CoreUtil\CoreUtil_String.h" />
+    <ClInclude Include="h\CoreUtil\CoreUtil_StringCoreUtils.h" />
+    <ClInclude Include="h\Enumerator\Util_Enumerator.h" />
+    <ClInclude Include="h\Enumerator\Util_Enumerator_Master.h" />
+    <ClInclude Include="h\Enumerator\Util_IEnumerator.h" />
+    <ClInclude Include="h\Enumerator\Util_Range.h" />
+    <ClInclude Include="h\Enumerator\Util_UniquePtrIterator.h" />
+    <ClInclude Include="h\File\Util_File.h" />
+    <ClInclude Include="h\IteratorMap.h" />
+    <ClInclude Include="h\KeyLoadedCommutativeMap.h" />
+    <ClInclude Include="h\Log\Util_ILoggingDevice.h" />
+    <ClInclude Include="h\Log\Util_LoggingDevice.h" />
+    <ClInclude Include="h\MatrixMap.h" />
+    <ClInclude Include="h\Memory\Util_MemoryMaster.h" />
+    <ClInclude Include="h\Memory\Util_MemView_ByteArray.h" />
+    <ClInclude Include="h\Memory\Util_MemView_TypeAllocStack.h" />
+    <ClInclude Include="h\Memory\Util_MemView_Array.h" />
+    <ClInclude Include="h\Stat\Util_Stat.h" />
+    <ClInclude Include="h\Stat\Util_StatMaster.h" />
+    <ClInclude Include="h\StringUtil\Util_StringUtil_Master.h" />
+    <ClInclude Include="h\Timing\Util_TimeAccumulator.h" />
+    <ClInclude Include="h\TriangleMap.h" />
+    <ClInclude Include="h\Util_Master.h" />
+    <ClInclude Include="h\Util_MasterLeanAndMean.h" />
+    <ClInclude Include="h\Util_MemoryManager.h" />
+    <ClInclude Include="h\Util_Output.h" />
+    <ClInclude Include="h\Util_StringAlgo.h" />
+    <ClInclude Include="h\WindowUtil\WindowUtil_master.h" />
+    <ClInclude Include="KeyMap.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="Util_App.h" />
+    <ClInclude Include="Util_StringAlgo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cpp\Container\Util_AllocBlockList.cpp" />
+    <ClCompile Include="cpp\Container\Util_AllocHandleList.cpp" />
+    <ClCompile Include="cpp\Container\Util_AllocList.cpp" />
+    <ClCompile Include="cpp\Container\Util_AtomicAllocList.cpp" />
+    <ClCompile Include="cpp\CoreUtil\CoreUtil_Bytes.cpp" />
+    <ClCompile Include="cpp\CoreUtil\CoreUtil_Hash.cpp" />
+    <ClCompile Include="cpp\CoreUtil\CoreUtil_String.cpp" />
+    <ClCompile Include="cpp\File\Util_File.cpp" />
+    <ClCompile Include="cpp\Log\Util_LoggingDevice.cpp" />
+    <ClCompile Include="cpp\Stat\Util_Stat.cpp" />
+    <ClCompile Include="cpp\StringUtil\Util_StringUtil.cpp" />
+    <ClCompile Include="cpp\Timing\Util_TimeAccumulator.cpp" />
+    <ClCompile Include="cpp\WindowUtil\WindowUtil.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="Util_Output.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="scheme.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

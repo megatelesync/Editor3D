@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы исходного кода">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Generator">
+      <UniqueIdentifier>{84800ec9-0f34-483f-8ec6-c40147a42dee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Model">
+      <UniqueIdentifier>{1f38980a-7461-4090-9024-1e87839ef961}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Generator">
+      <UniqueIdentifier>{ce888561-897e-4213-8d76-31c37521c9f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Generator\Test">
+      <UniqueIdentifier>{69ab599e-7959-436e-a118-ee3a6b8a702d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Generator\Test">
+      <UniqueIdentifier>{f6f5d848-3e06-476c-b6a6-aa7f576a3242}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EditableModel.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="TestGeometryGenerator.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelPolygonHandleBase.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="EditableModel_structs.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelVertexHandleBase.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelVertexHandle.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelVertexConstHandle_fwd.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelPolygonConstHandle_fwd.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelEdgeConstHandle_fwd.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="EditableModel_Model.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelEdgeHandleBase.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="EditableModel_Model_types_fwd.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="EditableModel_handle_fwd.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="EditableModel_Math.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="EditableModel_GeneratorBase.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="EditableModel_PrismGenerator.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Generator\EditableModel_GridGenerator.h">
+      <Filter>Заголовочные файлы\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Generator\Test\EditableModel_TestPolyGenerator.h">
+      <Filter>Заголовочные файлы\Generator\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Generator\Test\EditableModel_TestSplittedPolyGenerator.h">
+      <Filter>Заголовочные файлы\Generator\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Generator\Test\EditableModel_TestSplittedEdgePolyGenerator.h">
+      <Filter>Заголовочные файлы\Generator\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Generator\EditableModel_PolygonGeneration.h">
+      <Filter>Заголовочные файлы\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="EditableModel_ModelPolygonHandle.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="QuickTODO.txt" />
+    <Text Include="test_report.txt" />
+    <Text Include="Refactor.txt" />
+    <Text Include="Inefficiencies.txt" />
+    <Text Include="global_scheme.txt" />
+    <Text Include="PhysicalStructure.txt" />
+    <Text Include="EditableModel_const_correctness.txt" />
+    <Text Include="TestGeometryGenerators.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cpp\Generator\EditableModel_PrismGenerator.cpp">
+      <Filter>Файлы исходного кода\Generator</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\Generator\EditableModel_GridGenerator.cpp">
+      <Filter>Файлы исходного кода\Generator</Filter>
+    </ClCompile>
+    <ClCompile Include="EditableModel_EdgeOperations.cpp">
+      <Filter>Файлы исходного кода\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="EditableModel_PolyOperations.cpp">
+      <Filter>Файлы исходного кода\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="EditableModel_VertexOperations.cpp">
+      <Filter>Файлы исходного кода\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="EditableModel_TestPolyGenerator.cpp">
+      <Filter>Файлы исходного кода\Generator\Test</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

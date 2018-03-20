@@ -1,0 +1,28 @@
+Input:
+	polyToSplit
+	startVertexEdge,
+	endVertexEnd
+Algo 1:
+	// New poly: two start vertices
+	ModelPolygonInfo newPolyInfo (materialIndex, startVertexInfo, endVertexInfo)
+
+	// Storing old links
+	EdgeMapSequence oldLinkedEdgeMapSequence
+	= SpliceAndGetOldEdgeLinks
+	(
+		polyToSplit, startVertexEdge, endVertexEdge, newPolyInfo
+	);
+
+	// unlink new poly from old vertices
+	UnlinkPolyFromVertices(startVertexEdge, endVertexEdge);
+
+	// add poly
+
+Algo 2:
+	// 1. Unlink poly from vertices [startVertexEdge, endVertexEdge)
+	// 2. Save links of edges [startVertexEdge; endVertexEdge)
+	// 3. create quad {startVertexEdge; (startVertexEdge; endVertexEdge); endVertexEdge}
+	// 4. LinkPolyEdges(newPoly.first, newPoly.lastButOne, oldLinkedEdgeMapSequence)
+	// 5. Link split edge and adj split edge
+	// 6. Link startVertexEdge with its start vertex
+	      (because it was unlinked, the vertex changed)

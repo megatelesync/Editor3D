@@ -1,0 +1,61 @@
+1. Algorithm:
+	1.1. Write the text algorithms
+		1.1.1. AhoCorasickSearch
+			1.1.1.1. The search function +
+			1.1.1.2. KeywordTree generator function
+			1.1.1.3. test
+		1.1.2. BoyerMooreSearch
+			1.1.2.1 Write the function +
+			1.1.2.2. test
+		1.1.3. BoyerMooreHorsepoolSearch
+			1.1.3.1. Write the function +
+			1.1.3.2. test
+
+2. Container:
+	2.1. IteratorMap
+		2.1.1. write the container class +
+		2.1.2. write the iterator class +/-
+			2.1.2.1. Make the dereference operation return the pair with references
+		2.1.3. Test the container operations
+			2.1.2.2.1. insert +
+			2.1.2.2.2. find +
+			2.1.2.2.3. erase +
+			2.1.2.2.4. at +
+			2.1.2.2.5. at for inserting new values +
+			2.1.2.2.6. erase(first, last) +
+			2.1.2.2.7. cbegin()/cend()
+				2.1.2.2.7.a cbegin()
+				2.1.2.2.7.b cend() 
+
+			// Additional functions {
+			2.1.2.2.8. equal_range(const key_type&) +
+			// }
+			2.1.2.2.9. iterator upper_bound(const key_type& k);
+		2.1.4. Test the iterator operations
+			2.1.4.1. Non-const iterator testing:			
+				2.1.4.1.1. operator ++					+
+				2.1.4.1.2. reading from operator *		+				
+			2.1.4.2. Const iterator testing:
+				2.1.4.2. Transform the return value of operator* to tuple of references
+				2.1.4.2.1. Problem: std::tuple<&,&> does not have first and second values
+				2.1.4.2.2. The value returned with operator-> must have the following behaviour:
+					2.1.4.2.2.1 Should be possible to access with first and last members
+					2.1.4.2.2.2 References of members returned with first or last.
+				2.1.4.2.3. The object returned by non-const operator* must have the following behaviour:
+					2.1.4.2.3.1. when copying to the value of type value_type, the values must be copied
+					2.1.4.2.3.2. when copying to value of type value_type&,
+								 the values must be not copied. 
+				2.1.4.2.z.  change the reference in IteratorMapTypedefs from value_type to value_type_ref +
+				2.1.4.3 operator-> testing 
+					2.1.4.3.1 updating one of the members +
+					2.1.4.3.2 taking reference to one of the members returned by operator-> +
+				2.1.4.4 non-const operator* testing
+					2.1.4.4.1 taking reference to pair returned by operator* and updating the mapped_value +
+					2.1.4.4.2 converting to std::pair
+					2.1.4.4.3 copying to value_type
+					2.1.4.4.4 copying to value_type&
+				2.1.4.5 Current iterator problems:
+					2.1.4.5.1 Getting the value returned by the iterator with the auto keyword
+							  returns the value that contains references, not copies 
+				 
+		

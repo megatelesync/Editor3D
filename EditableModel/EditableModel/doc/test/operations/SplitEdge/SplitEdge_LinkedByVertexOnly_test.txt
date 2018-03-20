@@ -1,0 +1,2 @@
+Represents the case when there's 
+no adjacent edge containg the splitter vertex

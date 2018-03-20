@@ -1,0 +1,5 @@
+MemoryManager:
+	-Garbage collector in the separate thread;
+	-Allows to allocate aligned blocks of memory;
+	-Allows to get free memory size;
+	-Allows to preallocate memory.

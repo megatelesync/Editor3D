@@ -1,0 +1,39 @@
+The member GetModel() of the const handles (ModelEdgeConstHandle, ModelVertexConstHandle, ModelPolygonConstHandle)
+returns const Model *.
+
+Making store adjacency handles:
+1. Store hash as key +
+2. Model::Link(const handle, const handle) is deprecated
+3. Create a Commutative Map container that also associates values with each row and column +
+4. Rewrite the code:	
+	4.1. Model
+		4.1.1. Link +
+		4.1.2. Unlink(edge) +
+		4.1.3. Unlink(const edge)
+		4.1.4. UnlinkEdge +
+
+		4.1.5. Create GetAdjEdgeMap function +
+		4.1.6. Create GetAdjEdgeHashMap
+		4.1.7. IsLinked +
+
+	4.2. Replace calls to GetAdjEdge to calls for GetAdjEdgeMap +
+		4.2.1. In file EditableModel_Model.h +
+			4.2.1.1. GetEdgeLinkMap +
+			4.2.1.2. GetLinkInfo +
+			4.2.1.3. InverseEdgeLinks +
+			4.2.1.4. IsSingleLinkedTo +
+			4.2.1.5. NumLinkedEdges +
+			4.2.1.6. AreLinked +
+			4.2.1.6.
+		4.2.2. In file EditableModel_EdgeOperations.cpp +
+			4.2.2.1. FindAdjacentEdgeContainingVertex +
+			4.2.2.2. MoveEachEdgeLink_FromEdgeToNextEdge_IfNecessary +
+			4.2.2.3. FirstAdjacentEdge +
+			4.2.2.4. ReplaceEdge_InEdgeToEdgeLinks +
+			4.2.2.5. FirstAdjacentEdgeContainingVertex
+		4.2.3. In file EditableModel_PolyOperations.cpp +
+			4.2.3.1. FixLinks_OfTwoVertexPoly +
+
+5. refactoring:
+	5.1 remove the _adjMap and _adjMapHash
+	5.2 rename the _adjLoadedKeyMap to _adjMap

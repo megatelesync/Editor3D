@@ -1,0 +1,28 @@
+Goals:
+1. Programming:
+	1.1. Simplest editor
+	1.2. Editor
+	1.3. Geometry generators (cube,sphere,prism,torus,grid)
+	1.4. Operations
+2. Profiling:
+	2.1. Measure time using chrono
+	2.2. Measure memory
+3. Testing:
+	3.1. Create test geometry generators
+---------------------------------------------------------------------------------
+4. Operations
+	Operation list:
+	4.1. Vertex operations
+		4.1.1. Weld vertices
+		4.1.2. Remove vertex with removing all polys using that vertex
+	4.2. Edge operations
+		4.2.1. Chamfer
+		4.2.2. Cap edges
+		4.2.3. Extrude edges
+		4.2.4. Remove edge
+	4.3. Polygon operations
+		4.3.1 Inset
+		4.3.2 Bevel
+		4.3.3 Flip normal
+		4.3.4 Triangulate
+5. Load/save geometry

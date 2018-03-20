@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы исходного кода">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Algorithm">
+      <UniqueIdentifier>{2a634872-f181-4e09-afa2-2513d40c45dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Algorithm">
+      <UniqueIdentifier>{fc69784d-480b-47c2-8678-4cea1a4bcd46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Enumerator">
+      <UniqueIdentifier>{f0d406ee-8534-441c-8f38-f42767f42e9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\CoreUtil">
+      <UniqueIdentifier>{cf83acb8-ec58-429f-b0c6-02067e83cc1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\WindowUtil">
+      <UniqueIdentifier>{6e6d95ab-2b23-4fb3-8ec5-a7c2373326f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\WindowUtil">
+      <UniqueIdentifier>{1c519224-e71d-47c0-9145-2d301a697a82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Container">
+      <UniqueIdentifier>{7cb20360-e574-49ac-83cc-3667be516d65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Config">
+      <UniqueIdentifier>{2614a4a1-fb85-4533-b2e8-abeeea85f441}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\StringUtil">
+      <UniqueIdentifier>{f9e53807-559e-4f5d-8275-aa13ee3bbeb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\StringUtil">
+      <UniqueIdentifier>{b82a8373-a537-415b-991d-a652253eea14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Log">
+      <UniqueIdentifier>{4e76650e-04bb-4a2a-be66-bffe0d243682}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Log">
+      <UniqueIdentifier>{09956458-4d55-437d-a06e-fd98a08b684f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Container">
+      <UniqueIdentifier>{1cc8e461-8eff-4529-8825-bd3d9d9e6b48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\File">
+      <UniqueIdentifier>{e1618880-7e2e-4907-903e-f1568f181b71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\File">
+      <UniqueIdentifier>{468a708b-800e-490c-9d26-edb12acb721a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Timing">
+      <UniqueIdentifier>{15ab8503-e26d-4759-a68e-ea338d10a49a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Timing">
+      <UniqueIdentifier>{4fa9bb66-610e-48bf-9ebb-595723e7ddfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\CoreUtil">
+      <UniqueIdentifier>{ace4edeb-876a-4f59-a825-5e970b93807a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Statistics">
+      <UniqueIdentifier>{92343fc6-9d5a-4f2f-883b-3d260c02559a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Stat">
+      <UniqueIdentifier>{50447e30-be17-44ba-bcff-e32e7f13c7f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Memory">
+      <UniqueIdentifier>{25c0ae7b-20e0-4994-b517-4fdadc8fec36}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="h\ArrayPtr.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="h\CommutativeMap2D.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="h\MatrixMap.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="h\TriangleMap.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyMap.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Util_MemoryManager.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Util_Output.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Util_App.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Util_StringAlgo.cpp">
+      <Filter>Файлы исходного кода\Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Util_StringAlgo.h">
+      <Filter>Заголовочные файлы\Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="h\IteratorMap.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="h\KeyLoadedCommutativeMap.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Enumerator\Util_Enumerator.h">
+      <Filter>Заголовочные файлы\Enumerator</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Enumerator\Util_Range.h">
+      <Filter>Заголовочные файлы\Enumerator</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Enumerator\Util_UniquePtrIterator.h">
+      <Filter>Заголовочные файлы\Enumerator</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Enumerator\Util_Enumerator_Master.h">
+      <Filter>Заголовочные файлы\Enumerator</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Util_Master.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="h\CoreUtil\CoreUtil_Master.h">
+      <Filter>Заголовочные файлы\CoreUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="h\CoreUtil\CoreUtil_StdInclude.h">
+      <Filter>Заголовочные файлы\CoreUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="h\WindowUtil\WindowUtil_master.h">
+      <Filter>Заголовочные файлы\WindowUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="h\CoreUtil\CoreUtil_Ptr.h">
+      <Filter>Заголовочные файлы\CoreUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Container\Util_DynamicArray2D.h">
+      <Filter>Заголовочные файлы\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Config\Util_Config_Master.h">
+      <Filter>Заголовочные файлы\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Config\Util_Config_Arr.h">
+      <Filter>Заголовочные файлы\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Container\Util_AllocList.h">
+      <Filter>Заголовочные файлы\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Container\Util_AllocHandleList.h">
+      <Filter>Заголовочные файлы\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="h\CoreUtil\CoreUtil_BaseObject.h">
+      <Filter>Заголовочные файлы\CoreUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Container\Util_OrderedMap.h">
+      <Filter>Заголовочные файлы\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="h\StringUtil\Util_StringUtil_Master.h">
+      <Filter>Заголовочные файлы\StringUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Log\Util_ILoggingDevice.h">
+      <Filter>Заголовочные файлы\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Log\Util_LoggingDevice.h">
+      <Filter>Заголовочные файлы\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Container\Util_AllocBlockList.h">
+      <Filter>Заголовочные файлы\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Container\Util_AtomicAllocList.h">
+      <Filter>Заголовочные файлы\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Enumerator\Util_IEnumerator.h">
+      <Filter>Заголовочные файлы\Enumerator</Filter>
+    </ClInclude>
+    <ClInclude Include="h\CoreUtil\CoreUtil_Assert.h">
+      <Filter>Заголовочные файлы\CoreUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="h\CoreUtil\CoreUtil_IdGenerator.h">
+      <Filter>Заголовочные файлы\CoreUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="h\File\Util_File.h">
+      <Filter>Заголовочные файлы\File</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Timing\Util_TimeAccumulator.h">
+      <Filter>Заголовочные файлы\Timing</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Util_MasterLeanAndMean.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="h\CoreUtil\CoreUtil_Bytes.h">
+      <Filter>Заголовочные файлы\CoreUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="h\CoreUtil\CoreUtil_Hash.h">
+      <Filter>Заголовочные файлы\CoreUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Stat\Util_Stat.h">
+      <Filter>Заголовочные файлы\Statistics</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Stat\Util_StatMaster.h">
+      <Filter>Заголовочные файлы\Statistics</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Memory\Util_MemoryMaster.h">
+      <Filter>Заголовочные файлы\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Memory\Util_MemView_Array.h">
+      <Filter>Заголовочные файлы\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Memory\Util_MemView_ByteArray.h">
+      <Filter>Заголовочные файлы\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Memory\Util_MemView_TypeAllocStack.h">
+      <Filter>Заголовочные файлы\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="h\CoreUtil\CoreUtil_String.h">
+      <Filter>Заголовочные файлы\CoreUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="h\CoreUtil\CoreUtil_CStrView.h">
+      <Filter>Заголовочные файлы\CoreUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="h\CoreUtil\CoreUtil_StringCoreUtils.h">
+      <Filter>Заголовочные файлы\CoreUtil</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Log.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Util_Output.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\WindowUtil\WindowUtil.cpp">
+      <Filter>Файлы исходного кода\WindowUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\StringUtil\Util_StringUtil.cpp">
+      <Filter>Файлы исходного кода\StringUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\Log\Util_LoggingDevice.cpp">
+      <Filter>Файлы исходного кода\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\Container\Util_AllocList.cpp">
+      <Filter>Файлы исходного кода\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\Container\Util_AllocBlockList.cpp">
+      <Filter>Файлы исходного кода\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\Container\Util_AllocHandleList.cpp">
+      <Filter>Файлы исходного кода\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\Container\Util_AtomicAllocList.cpp">
+      <Filter>Файлы исходного кода\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\File\Util_File.cpp">
+      <Filter>Файлы исходного кода\File</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\Timing\Util_TimeAccumulator.cpp">
+      <Filter>Файлы исходного кода\Timing</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\CoreUtil\CoreUtil_Bytes.cpp">
+      <Filter>Файлы исходного кода\CoreUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\CoreUtil\CoreUtil_Hash.cpp">
+      <Filter>Файлы исходного кода\CoreUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\Stat\Util_Stat.cpp">
+      <Filter>Файлы исходного кода\Stat</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\CoreUtil\CoreUtil_String.cpp">
+      <Filter>Файлы исходного кода\CoreUtil</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="scheme.txt" />
+  </ItemGroup>
+</Project>

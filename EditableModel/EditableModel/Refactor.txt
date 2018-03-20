@@ -1,0 +1,51 @@
+1. Создать операции для получения вершин, ребер и полигонов прямо по итератору на них
+2. Смотреть, чтобы хэндлы (даже если объект, на который указывает хэндл меняется) передавались по ссылке,
+   а не по указателю
+3. Проверить на const-correctness
+	3.1. ModelVertexHandle +
+	3.2. ModelEdgeHandle
+		3.2.1. EdgeTwo, EdgeOne etc. +
+		3.2.2. Direction +
+		3.2.3. Lerp +
+		3.2.4. Length +
+		3.2.5. LerpTexCoord +
+		3.2.6. operator!=, operator== +
+		3.2.7. 
+			inline XMVECTOR CalcNormal +
+			(
+				const ModelEdgeConstHandle& vertexEdgeOne,
+				const ModelEdgeConstHandle& vertexEdgeTwo,
+				const ModelEdgeConstHandle& vertexEdgeThree
+			);
+	3.3. ModelPolygonHandle
+		3.3.1 MakeEdgeQuads, Extrude, BridgeEdgeRange, BridgeEdgeRange
+		3.3.2 CalcNormal +
+4. Сделать полноценный итератор из ModelEdgeHandle
+5. Создать операцию GetEndVertexInfo заместо члена GetEndVertexInfo класса ModelEdgeHandle
+	5.1. Создать операцию GetEndVertexInfo +
+	5.2. Заменить код функции EndVertexInfo на текст из ModelEdgeHandle::GetEndVertexInfo
+	5.3. Делегировать вызовы функции ModelEdgeHandle::GetEndVertexInfo на EndVertexInfo.
+	5.4. Заменить вызовы ModelEdgeHandle::GetEndVertexInfo на эту операцию.
+6.  Создать глобальную функцию доступа StartModelVertex
+7. Создать глобальную функцию доступа StartModelVertexInfo
+8. Создать функцию DuplicateEdgeStart(const ModelEdgeHandle&), 
+которая будет копировать первую вершину ребра ModelEdgeHandle.
+
+6. Последовательно присваивать идентификаторы:
+	6.1. В качестве аргументов глобальных функций не надо добавлять постфикс In - он лишний.
+	6.2. Последовательное именование итераторов last и start
+	6.3. ModelPolygonHandle::GetPolyInfo() переименовать в ModelPolygonHandle::GetInfo()
+
+7. Последовательное использование итераторов на хэндл (start и end) в range
+
+8. Добавить глобальные функции, которые сразу создают ModelPolygonInfo и добавляют полигон в модель:
+	8.1. AddQuad(const ModelPolygonInfo&)
+
+9. Отрефакторить функцию MakeEdgeQuads(const ModelPolygonHandle& poly)
+
+10. Создать функцию Split, которая осуществляет Split по длине.
+11. Создать функцию для доступа к определенным edge полигонов типа Quad и т.д. +
+
+---------------------------------------------------------------------------------------------------------------------------------
+Caveats:
+1. Использование ThisType в ModelEdgeHandleBase::GetNext()

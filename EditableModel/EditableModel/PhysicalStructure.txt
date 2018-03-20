@@ -1,0 +1,40 @@
+EditableMode.h - main file
+Includes:
+	ModelPolygonHandleBase.h
+	ModelVertexHandle.h
+	ModelVertexConstHandle.h
+	ModelPolygonConstHandle_fwd.h
+
+ModelPolygonHandleBase.h - file of base class of model polygon handle type
+Includes:
+	EditableModel_structs.h
+	ModelPolygonConstHandle_fwd.h
+
+ModelVertexHandleBase.h - file of base class of model vertex handle type
+Includes:
+	ModelVertexConstHandle.h
+	EditableModel_structs.h
+
+ModelVertexConstHandle.h - file of base ckass if modek vertex const handle type
+Includes:
+	ModelVertexConstHandle_fwd.h
+	ModelVertexHandleBase.h
+
+ModelVertexHandle.h - file of ModelVertexHandle
+Includes:
+	ModelVertexHandleBase.h
+
+ModelVertexConstHandle_fwd.h
+Includes
+	EditableModel_structs.h
+
+ModelPolygonConstHandle_fwd.h
+Includes
+	EditableModel_structs.h	
+	ModelEdgeConstHandle_fwd.h
+
+ModelEdgeConstHandle_fwd.h
+Includes
+	EditableModel_structs.h
+
+EditableModel_structs.h - file to include structs that does not reference the model

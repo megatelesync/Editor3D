@@ -1,0 +1,159 @@
+1. Добавить список связей для моделей
+	1.1. Создать структуру ModelPerVertexData +
+		1.1. Там используется ModelEdgeHandle +
+	1.2. Добавить в класс Model поле _perVertexData +
+	1.3. Добавить операции работы с _perVertexData
+		1.3.1. AddVertex +
+		1.3.2. RemoveVertex +
+			1.3.2.1. Надо предоставить для ModelVertexHandle возможность получать данные о вершинне. +
+				1.3.2.1.1. ModelVertexHandleBase.h changed +
+					1.3.2.1.1.1. Надо реализовать конструктор, позволяющий инициализировать с помощью PerVertexDataIt +
+					1.3.2.1.1.2. Удалить ссылку на vertex iterator из ModelVertexhandleBase +
+		1.3.2. Remove poly
+			1.3.2.1. RemovePolyOrphanVertices(ModelPolygonHandle& poly) +
+						- Removes all vertices that will be orphan when the given poly is removed +.
+					1.3.2.1.1. There is a looping: Removing orhan vertices when removing poly +
+			1.3.2.2. Remove links to adjacent polys
+
+		1.3.3. Add poly: +/-
+			1.3.3.1. Сделать так, чтобы при линковке полигона и вершины одновременно происходила и линковка к другим полигонам,
+					 смежным очередной ликуемой вершине и одной из инцидентных ей вершин.
+					1.3.3.1.1. Создать функцию GetIncidenceDirection(ModelEdgeConstHandle first, ModelEdgeConstHandle second)
+					1.3.3.1.2. Добавить необходимый код в Add poly +
+					1.3.3.1.3. LinkVerticesToPolyEdges - links all vertices of poly with correspoding edges of that poly +
+					1.3.3.1.4. FindCodirectedCoincideEdge_ByLinkedStartVert(const ModelEdgeConstHandle& edge) +
+					1.3.3.1.5. MakeEdgeToEdgeLink_ByLinkedVerts +
+					1.3.3.1.6. LinkEdgeStartToVertex +/-
+						1.3.3.1.6.1. The non-const version of the FirstAdjacentEdge operation must be implemented.
+									To implement this operation, the feature of getting
+									non-const linked edge handles must be implemented
+		1.3.4. Split edge: +
+			1.3.4.1. Operations:
+				1.3.4.1.1. GetVertexOrder +
+				1.3.4.1.2. AreOverlappedCodirected +
+				1.3.4.1.3. MoveEdgeLink + +
+				1.3.4.1.4. MoveEachEdgeLink_FromEdgeToNextEdge_IfNecessary 
+					1.3.4.1.4.a. Write +
+					1.3.4.1.4.b. Make compilable +
+						1.3.4.1.4.a.1. Create iterator map class that stores iterators +
+					1.2.4.1.4.c Debug
+				1.3.4.1.5. StartPosition							+
+				1.3.4.1.6. EndPosition								+
+				1.3.4.1.7. GetVertexOrder(directionEdge)			+rо позволять обращаться к ним с помощью iterator
+				1.3.4.1.7. FindAdjacentEdgeContainingVertex(edgeHandle, vertexHandle) +
+				1.3.4.1.8. 
+			1.3.4.2.  
+		1.3.5. WeldEdgeVertices (welds vertices of the same edge) +
+			1.3.5.1. RemoveModelEdge + - function for removing a given edge and its adjacent edge
+				1.3.5.1.1 FirstAdjacentEdge - function to find the first of adjacent edges
+					1.3.5.1.2. ConstEdgeHandle version +
+					1.3.5.1.3. Non-const edge handle version
+				1.3.5.1.2. GetCoincideVertexEdge_ForStartVertexOfEdge
+						find vertex of the single adjacent edge that goes through the starting vertex of the edge provided as argument
+					1.3.5.1.2.1  ConstEdgeHandle version +
+					1.3.5.1.2.2. Non-const edge handle version
+			1.3.5.2. Model::Unlink(ModelEdgeConstHandle&) +
+					- function for removing adjacency links of a given edge with all other edges 
+			1.3.5.2.1. Write up function removing poly +
+			1.3.5.2.2. FixLinks_OfTwoVertexPoly +/-
+				1.3.5.2.2.1 LinkOverlappedEdgePairs +/-
+					1.3.5.2.2.1.1.1. The non-const adjacency info is required 
+			1.3.5.2.4. Write a function for welding edge of only one of two adjacent polys:
+					WeldPolyEdgeVertices() +
+			1.3.4.2.5. WeldVertexAndMoveVertexLinks +
+					replaces all handles to this vertex by the handle of other vertex,
+					and merges their vertex links also
+		1.3.6. FlipNormal +
+			1.3.6.1. Function for inversing links:
+				1.3.6.1.1. InverseEdgeLink +
+				1.3.6.1.2. InverseEdgeLinks +
+			1.3.6.2. Main functions (FlipNormal itself) +
+			1.3.6.3. ReplaceEdge_InEdgeToVertexLinks(originalEdge, newEdge); +
+			1.3.6.4. RepaceEdge_InEdgeToEdgeLink(oldEdge, newEdge) +
+		1.3.7. Join (aka RemoveEdge)
+		1.3.8. MakeEdgeQuads
+			1.3.8.1. MakeEdgeQuad operation +
+				1.3.8.1.1. write function +
+				1.3.8.1.2. Debug function +
+					1.3.8.1.2.1. Error in AddPoly: invalid operator < +
+			1.3.8.2. MakeEdgeQuads function
+				1.3.8.2.1. create LinkPolySideEdges function
+					1.3.8.2.1.1. write + 
+					1.3.8.2.1.2. FirstAdjacentEdge should return non-const result (commented)
+		1.3.9. Triangulate
+			1.3.9.1. MakeEdgeTriangle +
+			1.3.9.2. Triangulate function
+		1.3.9. SplitPoly +
+			1.3.10. UnlinkPolyFromVertices that takes a range of edges to unlink from +
+			1.3.11. Operations for copying links of edge ranges and updating the edge range
+				1.3.11.0. +
+					typedef std::unordered_set<ModelEdgeHandle> EdgeSet;
+					typedef std::vector<std::unordered_set<ModelEdgeHandle>> EdgeLinkSetSequence; // +
+				1.3.11.1. 
+					std::vector<std::unordered_set<ModelEdgeHandle>>
+					CopyEdgeLinkSetSequence_CorrespodingPolyEdges (const ModelEdgeHandle& startEdge, const ModelEdgeHandle& lastEdge) +
+
+					1.3.11.1.1. GetEdgeLinkMap(const ModelEdgeConstHandle& edge) +
+					1.3.11.1.2. Create non-const version
+				1.3.11.2. 
+					LinkPolyEdges +
+					(						
+						const ModelEdgeHandle& startEdge, const ModelEdgeConstsHandle& lastEdge,
+						const std::vector<std::unordered_set<ModelEdgeHandle>>& linkSetsCoppespondingEdges,
+					);
+				1.3.11.3.
+					UnlinkPolyFromEdges +
+					(
+						const ModelEdgeHandle& startEdge, const ModelEdgeConstHandle& lastEdge
+					);
+					UnlinkPolyFromEdges +
+					(
+						const ModelPolygonHandle& poly
+					);
+				1.3.11.4. +
+					MoveEdgeLinkSetSequence_CorrespondingPolyEdges(const ModelEdgeHandle& startEdge, const ModelEdgeHandle& lastEdge)
+				1.3.11.5. +
+					LinkPolyEdges(const ModelEdgeHandle& startEdge, const ModelEdgeHandle& lastEdge, ConstEdgeMapSequenceConstIt firstEdgeMapIt, ConstEdgeMapSequenceConstIt lastEdgeMapIt)
+			1.3.12. Operations for splicing an edge range with fixing the links
+				1.3.12.1. Splice operation +
+				1.3.12.2. SpliceAndGetOldEdgeLinks +
+		1.3.10. Extrude
+		1.3.11. RemoveEdgeAndLinks: remove edge and all of its vertex and edge links +
+				(this operation is useful to cut corner of a poly without affecting other polys)
+		1.3.12. DetachPolyVertex: dublicate specific vertex of poly and move it as you wish without affecting other polys
+	1.4. При добавленнии и удалении вершин обновлять и информацию в _perVertexData	
+	1.5. Сменить ссылку в ModelVertexHandle на _perVertexData +
+	1.6. Удалить старый массив вершин _vertices
+	1.7. Добавить в ModelVertexHandle операции для получения связанных edge.
+	1.8. Предоставить для PolygonVertexInfo операции, позволяющие осуществлять доступ к ModelVertexInfo, position и т.д.
+HINT: Предположил, что конструктор по-умолчанию не нужен для ModelPerVertexData, поскольку объекты данного класса не хранятся в std::map
+
+1. Дополнительные операции
+	1.1. IsOrphan(ModelVertexHandle&)+
+	1.2. Operations for navigating the out edges of the vertex
+	1.3. 
+
+1. Реализация операций:
+	1.1. DuplicateEdgeVertices +
+	1.2. MakeEdgeQuad +
+	1.3. WeldPolyVertices +
+	1.4. CopyPolygonVertexInfo +
+
+
+1. Создать константный ModelPolygonHandle
+	1.1. Спроектировать преобразование из неконстантного хэндла в константный
+	1.2. Добавить range для константных хэндлов
+	1.3. Подумать над обощением операций на случай константных хэндлов
+		1.3.1. operator==, operator !=
+		1.3.2. EdgeTwo, EdgeThree etc.
+		1.3.3. MakeEdgeQuadsLoop
+		1.3.4. 
+	1.4. Переделать ModelEdgeHandle:
+		1.4.1 Конструктор должен иметь воозможность принимать хэндл типа ModelEdgeHandleBase
+		1.4.2. Получить тип текущего класса для операции GetNextEdge() +
+2. Создать константный ModelVertexHandle +
+		2.1. Подумать над тем, как определить тип, который возвращает *_vertexIterator +.
+3. Разрешить Circular dependency между ModelPolygonHandle и ModelEdgeHandle.
+	3.1. Предоставить для типа ModelVertexHandle параметры, с помощью которых можно получить доступ к ModelEdgeHandle и ModelPolygonHandle.
+		3.1.1. Лучше в качестве параметров задать все параметры (для ModelEdgeHandle и ModelPolygonHandle). 
+		3.1.2. 

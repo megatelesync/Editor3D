@@ -1,0 +1,35 @@
+Inputs:
+	edge
+	splitterVertex
+
+Version 1
+	// polygon on which adjacent edge the splitter vertex is lying on
+	ModelPolygonHandle 		adjEdgePoly;
+	// edge of the poly produced during the split of the adjacent edge
+	ModelEdgeHandle 		newAdjEdge;
+	// Split edge passed as the split operation argument
+	ModelEdgeHandle newEdge = SplitPolyEdge(edge, splitterVertex)
+	// Split adjacent edge if there's one
+	ModelEdgeHandle adjEdgeToSplit = FindAdjacentEdgeContainingVertex(edge, splitterVertex)
+	EdgeAdjacency edgeAdj = GetLinkInfo(edge, adjEdgeToSplit);
+	if(!adjEdgeToSplit.IsNull())
+	{
+		adjEdgePoly = adjEdgeToSplit.GetPoly();
+		newAdjEdge = adjEdgePoly.SplitPolyEdge(adjEdgeToSplit, splitterVertex);
+	}
+
+	// Move each link of the edge passes as the split operation argument
+	// to the newEdge
+	MoveEachEdgeLink_FromEdgeToNextEdge_IfNecessary(edge);
+
+	// Link an edge produced during splitting an adjacent edge (if there's one)
+	// with an edge passed as the split operation argument
+	if(!newAdjEdge.IsNull())
+	{
+		// Choose the adjacency direction between the 
+		// edge passed as the argument to the split operation
+		// and the adjacent edge
+		pModel->Link(edge, newAdjEdge, edgeAdj);
+	}
+
+	
